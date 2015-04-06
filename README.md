@@ -4,7 +4,7 @@ Uses [Docker Compose](https://docs.docker.com/compose/) to build a Jenkins Opera
 
 Currently specific to Mac OS X.
 
-Base includes:
+####Base includes:
 - [dnsdock](https://github.com/tonistiigi/dnsdock) providing DNS for docker containers and exposed to Mac OS X 
 - HA Jenkins Operation Center proxied via HAProxy
 - HA Client Master proxied via HAProxy
@@ -29,7 +29,7 @@ Base includes:
 - from your boot2docker shell, run `docker-compose up -d` and after a few minutes (maybe a bit longer) you should have:
   - HA JOC at http://joc.bee.docker (check http://joc.bee.docker:9000 for HAProxy statistics)
   - HA Jenkins Enterprise at http://apiteam.bee.docker
-  - 
+
 ###Create a New Demo
 - You should probably fork this repo, but not absolutely necessary
 - checkout a new branch: `git checkout -b workflow-demo master`
