@@ -18,6 +18,7 @@ Base includes:
   - `vi /var/lib/boot2docker/profile`
   - add the following line and save: `EXTRA_ARGS="-bip=172.17.42.1/24 -dns 172.17.42.1 -dns 8.8.8.8"`
   - exit ssh and restart boot2docker: `boot2docker restart`
+  - update the VirtualBox network adapter (vboxnet<x> - number may vary) *Promiscuous Mode* to *Allow All* 
 - Route traffic from Mac OS X to boot2docker VM IP: `sudo route -n add -net 172.17.0.0 <BOOT2DOCKER_IP>`
   - BOOT2DOCKER_IP retrieved via `boot2docker ip`
 - Configure OS X to use dnsdock DNS by creating the file `/etc/resolver/docker` with content of `nameserver 172.17.42.1`
