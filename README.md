@@ -29,4 +29,13 @@ Base includes:
 - from your boot2docker shell, run `docker-compose up -d` and after a few minutes (maybe a bit longer) you should have:
   - HA JOC at http://joc.bee.docker (check http://joc.bee.docker:9000 for HAProxy statistics)
   - HA Jenkins Enterprise at http://apiteam.bee.docker
-  
+  - 
+###Create a New Demo
+- You should probably fork this repo, but not absolutely necessary
+- checkout a new branch: `git checkout -b workflow-demo master`
+- update `docker-compose.yml` to include whatever additional Docker containers you may need - dnsdock will automatically expose them to Mac OS X, so you could for example create a Jetty container with the environment parameters `DNSDOCK_NAME=staging` and a `DNSDOCK_IMAGE=jetty` and if you didn't change the dnsdock defautls, your new jetty container will be available at http://staging.jettty.docker
+- You may keep the base Jenkins joc and apiteam or start completelly from scratch by removing the `var` directory. At start up, Jenkins Enterprise and JOC will rebuild the respective working directories from scracth - so this may take some time.
+
+You can have as many branches for different demo scenarios that you can think of...
+
+More details to come...
