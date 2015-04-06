@@ -1,0 +1,12 @@
+#exclude license files
+license.xml
+
+#exclude certain directories
+analytics-reporting-queue/
+elasticsearch/
+jenkins.diagnostics.ooom.OutOfOrderBuildMonitor/
+monitoring/
+plugins/
+war/
+slow-requests/
+support/

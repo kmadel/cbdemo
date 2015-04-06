@@ -1,0 +1,4 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<com.cloudbees.jenkins.plugins.jsync.archiver.JSyncArtifactManagerFactory_-DescriptorImpl plugin="cloudbees-jsync-archiver@5.3">
+  <upgraded>true</upgraded>
+</com.cloudbees.jenkins.plugins.jsync.archiver.JSyncArtifactManagerFactory_-DescriptorImpl>

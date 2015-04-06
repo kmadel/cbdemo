@@ -1,0 +1,87 @@
+dnsdock:
+    image: tonistiigi/dnsdock
+    ports: 
+        - "172.17.42.1:53:53/udp"
+    volumes: 
+        - /var/run/docker.sock:/var/run/docker.sock
+        - /Users/kmadel/dev/CloudBees/docker/cbdemo:/data
+    environment:
+        nameserver: 8.8.8.8:53
+joc1:
+    image: apemberton/jenkins-operations-center
+    command: --prefix=""
+    expose:
+        - "4001"
+    volumes_from:
+        - dnsdock
+    environment:
+        - JENKINS_HOME=/data/var/lib/jenkins/joc
+        - DNSDOCK_NAME=primary
+        - DNSDOCK_IMAGE=joc
+joc2:
+    image: apemberton/jenkins-operations-center
+    command: --prefix=""
+    expose:
+        - "4001"
+    volumes_from:
+        - dnsdock
+        - joc1
+    environment:
+        - JENKINS_HOME=/data/var/lib/jenkins/joc
+        - DNSDOCK_NAME=secondary
+        - DNSDOCK_IMAGE=joc
+apiTeam1:
+    image: apemberton/jenkins-enterprise
+    command: --prefix=""
+    volumes_from:
+        - dnsdock
+    environment:
+        - JENKINS_HOME=/data/var/lib/jenkins/api-team
+        - DNSDOCK_NAME=primary
+        - DNSDOCK_IMAGE=apiteam
+apiTeam2:
+    image: apemberton/jenkins-enterprise
+    command: --prefix=""
+    volumes_from:
+        - dnsdock
+        - apiTeam1
+    environment:
+        - JENKINS_HOME=/data/var/lib/jenkins/api-team
+        - DNSDOCK_NAME=secondary
+        - DNSDOCK_IMAGE=apiteam
+slave1:
+    image: apemberton/jenkins-slave
+    volumes_from:
+        - dnsdock
+    environment:
+        - DNSDOCK_NAME=slave1
+        - DNSDOCK_IMAGE=bee
+slave2:
+    image: apemberton/jenkins-slave
+    volumes_from:
+        - dnsdock
+    environment:
+        - DNSDOCK_NAME=slave2
+        - DNSDOCK_IMAGE=bee
+jocproxy:
+    image: dockerfile/haproxy
+    expose:
+        - "4001"
+    volumes_from:
+        - joc2
+    volumes:
+        - /Users/kmadel/dev/CloudBees/docker/cbdemo/haproxy/joc:/haproxy-override
+    environment:
+        - DNSDOCK_NAME=joc
+        - DNSDOCK_IMAGE=bee
+apiteamproxy:
+    image: dockerfile/haproxy
+    expose:
+        - "22"
+    volumes_from:
+        - apiTeam2
+    volumes:
+        - /Users/kmadel/dev/CloudBees/docker/cbdemo/haproxy/apiteam:/haproxy-override
+    environment:
+        - DNSDOCK_NAME=apiteam
+        - DNSDOCK_IMAGE=bee

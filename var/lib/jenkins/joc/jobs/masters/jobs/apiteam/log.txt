@@ -1,0 +1,2 @@
+Connected
+ClientMaster{fullName=masters/apiteam,uid=3bae863f-12ad-479d-ab97-eb6aa456c1d2,state=Approved}

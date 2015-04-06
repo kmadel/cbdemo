@@ -1,0 +1,5 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<com.cloudbees.opscenter.analytics.reporter.AnalyticsReporterConfiguration plugin="operations-center-analytics-reporter@1.6">
+  <submissionPeriodSeconds>10</submissionPeriodSeconds>
+  <enabled>false</enabled>
+</com.cloudbees.opscenter.analytics.reporter.AnalyticsReporterConfiguration>

@@ -1,0 +1,5 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<com.cloudbees.jenkins.plugin.metrics.views.Alerter plugin="cloudbees-monitoring@1.7">
+  <recipientList/>
+  <conditionList/>
+</com.cloudbees.jenkins.plugin.metrics.views.Alerter>

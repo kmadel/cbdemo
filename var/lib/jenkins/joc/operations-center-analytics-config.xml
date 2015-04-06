@@ -1,0 +1,15 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<com.cloudbees.opscenter.analytics.AnalyticsConfiguration plugin="operations-center-analytics@1.6">
+  <elasticsearchProvider class="com.cloudbees.opscenter.elasticsearch.embedded.EmbeddedElasticsearch" plugin="operations-center-embedded-elasticsearch@1.6-1.3.5.0">
+    <settings>
+      <bindHost>127.0.0.1</bindHost>
+      <publishHost>127.0.0.1</publishHost>
+      <httpPort>9200</httpPort>
+      <nativePort>9300</nativePort>
+      <multiCastEnabled>false</multiCastEnabled>
+      <dataPath>elasticsearch/data</dataPath>
+      <logsPath>elasticsearch/logs</logsPath>
+    </settings>
+  </elasticsearchProvider>
+  <feederUrl>http://joc.bee.docker/feeder</feederUrl>
+</com.cloudbees.opscenter.analytics.AnalyticsConfiguration>

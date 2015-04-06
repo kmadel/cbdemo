@@ -1,0 +1,6 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<jenkins.security.QueueItemAuthenticatorConfiguration>
+  <authenticators>
+    <com.cloudbees.opscenter.server.clusterops.adhoc.AdHocQueueItemAuthenticator plugin="operations-center-clusterops@1.6"/>
+  </authenticators>
+</jenkins.security.QueueItemAuthenticatorConfiguration>

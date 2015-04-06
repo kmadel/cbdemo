@@ -1,0 +1,6 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<jenkins.model.ArtifactManagerConfiguration>
+  <artifactManagerFactories>
+    <com.cloudbees.jenkins.plugins.jsync.archiver.JSyncArtifactManagerFactory plugin="cloudbees-jsync-archiver@5.3"/>
+  </artifactManagerFactories>
+</jenkins.model.ArtifactManagerConfiguration>

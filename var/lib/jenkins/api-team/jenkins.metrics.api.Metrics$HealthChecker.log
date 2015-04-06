@@ -1,0 +1,6 @@
+Starting health checks at Mon Apr 06 04:45:39 UTC 2015
+Health check results atMon Apr 06 04:45:39 UTC 2015:
+ * disk-space: Result{isHealthy=true}
+ * plugins: Result{isHealthy=true, message=No failed plugins}
+ * temporary-space: Result{isHealthy=true}
+ * thread-deadlock: Result{isHealthy=true}

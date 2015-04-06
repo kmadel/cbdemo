@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<com.cloudbees.opscenter.analytics.PluginImpl plugin="operations-center-analytics@1.6">
+  <createdDashboards>
+    <string>builds</string>
+    <string>performance</string>
+  </createdDashboards>
+</com.cloudbees.opscenter.analytics.PluginImpl>

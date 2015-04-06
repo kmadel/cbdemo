@@ -1,0 +1,6 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<com.cloudbees.opscenter.server.security.SecurityEnforcer_-GlobalConfigurationImpl plugin="operations-center-server@1.6">
+  <global class="com.cloudbees.opscenter.server.security.NoSecurityEnforcer">
+    <canOverride>false</canOverride>
+  </global>
+</com.cloudbees.opscenter.server.security.SecurityEnforcer_-GlobalConfigurationImpl>

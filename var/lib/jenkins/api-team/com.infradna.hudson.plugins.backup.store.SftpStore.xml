@@ -1,0 +1,4 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<com.infradna.hudson.plugins.backup.store.SftpStore_-DescriptorImpl plugin="infradna-backup@3.20">
+  <migratedCredentials>true</migratedCredentials>
+</com.infradna.hudson.plugins.backup.store.SftpStore_-DescriptorImpl>

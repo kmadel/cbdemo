@@ -1,0 +1,29 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<hudson.util.DescribableList>
+  <com.cloudbees.jenkins.plugins.foldersplus.SecurityTokensNodeProperty_-NodeMonitorImpl plugin="cloudbees-folders-plus@2.10">
+    <ignored>false</ignored>
+  </com.cloudbees.jenkins.plugins.foldersplus.SecurityTokensNodeProperty_-NodeMonitorImpl>
+  <hudson.node__monitors.ArchitectureMonitor>
+    <ignored>false</ignored>
+  </hudson.node__monitors.ArchitectureMonitor>
+  <hudson.node__monitors.ClockMonitor>
+    <ignored>false</ignored>
+  </hudson.node__monitors.ClockMonitor>
+  <hudson.node__monitors.DiskSpaceMonitor>
+    <ignored>false</ignored>
+    <freeSpaceThreshold>1GB</freeSpaceThreshold>
+  </hudson.node__monitors.DiskSpaceMonitor>
+  <hudson.node__monitors.SwapSpaceMonitor>
+    <ignored>false</ignored>
+  </hudson.node__monitors.SwapSpaceMonitor>
+  <hudson.node__monitors.TemporarySpaceMonitor>
+    <ignored>false</ignored>
+    <freeSpaceThreshold>1GB</freeSpaceThreshold>
+  </hudson.node__monitors.TemporarySpaceMonitor>
+  <com.cloudbees.jenkins.plugins.nodesplus.OwnerNodeProperty_-NodeMonitorImpl plugin="cloudbees-nodes-plus@1.10">
+    <ignored>false</ignored>
+  </com.cloudbees.jenkins.plugins.nodesplus.OwnerNodeProperty_-NodeMonitorImpl>
+  <hudson.node__monitors.ResponseTimeMonitor>
+    <ignored>false</ignored>
+  </hudson.node__monitors.ResponseTimeMonitor>
+</hudson.util.DescribableList>
