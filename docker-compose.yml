@@ -4,7 +4,7 @@ dnsdock:
         - "172.17.42.1:53:53/udp"
     volumes: 
         - /var/run/docker.sock:/var/run/docker.sock
-        - /Users/kmadel/dev/CloudBees/docker/cbdemo:/data
+        - /Users/David/Projects/CloudBees/docker/cbdemo:/data
     environment:
         nameserver: 8.8.8.8:53
 joc1:
@@ -70,7 +70,7 @@ jocproxy:
     volumes_from:
         - joc2
     volumes:
-        - /Users/kmadel/dev/CloudBees/docker/cbdemo/haproxy/joc:/haproxy-override
+        - /Users/David/Projects/CloudBees/docker/cbdemo/haproxy/joc:/haproxy-override
     environment:
         - DNSDOCK_NAME=joc
         - DNSDOCK_IMAGE=bee
@@ -81,7 +81,7 @@ apiteamproxy:
     volumes_from:
         - apiTeam2
     volumes:
-        - /Users/kmadel/dev/CloudBees/docker/cbdemo/haproxy/apiteam:/haproxy-override
+        - /Users/David/Projects/CloudBees/docker/cbdemo/haproxy/apiteam:/haproxy-override
     environment:
         - DNSDOCK_NAME=apiteam
         - DNSDOCK_IMAGE=bee
