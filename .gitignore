@@ -3,6 +3,7 @@ license.xml
 
 #exclude misc litter
 *.log
+**/.owner
 
 #exclude certain directories
 analytics-reporting-queue/
