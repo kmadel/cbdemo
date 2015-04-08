@@ -1,6 +1,10 @@
 #exclude license files
 license.xml
 
+#exclude misc litter
+*.log
+**/.owner
+
 #exclude certain directories
 analytics-reporting-queue/
 elasticsearch/
@@ -10,3 +14,4 @@ plugins/
 war/
 slow-requests/
 support/
+jgroups/
