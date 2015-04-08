@@ -1,17 +1,94 @@
-#exclude license files
+# Licenses
 license.xml
 
-#exclude misc litter
-*.log
-**/.owner
+# OSX specific
+.DS_Store
+.AppleDouble
+.LSOverride
 
-#exclude certain directories
+# Thumbnails
+._*
+
+# Files that might appear on external disk
+.Spotlight-V100
+.Trashes
+
+# Directories potentially created on remote AFP share
+.AppleDB
+.AppleDesktop
+Network Trash Folder
+Temporary Items
+.apdisk
+
+# The following ignores...
+# Miscellaneous Hudson litter
+*.log
+*.tmp
+*.old
+*.bak
+*.jar
+*.json
+*.h2.db
+*.lock.db
+*.trace.db
+log.txt
+
+# Linux user files
+.Xauthority
+.bash_history
+.bash_profile
+.fontconfig
+.gitconfig
+.gem
+.lesshst
+.mysql_history
+.owner
+.ri
+.rvm
+.ssh
+.viminfo
+.vnc
+bin/
+
+# Generated state
+**/.owner
+**/secret.key
+**/queue.xml
+**/fingerprints/
+**/shelvedProjects/
+**/updates/
+**/war/
+
+# Tools that Jenkins manages
+/tools/
+
+# Exclude extracted plugins but not the plugin binary
+**/plugins/**
+!**/plugins/*.jpi
+
+# Job state
+**/jobs/*/workspace/
+**/lastStableBuild
+**/lastUnstableBuild
+**/lastSuccessfulBuild
+**/lastUnsuccessfulBuild
+**/lastFailedBuild
+**/nextBuildNumber
+**/modules/
+
+# JEBC
+jgroups/
+*~
+**/wars/jenkins*.war
+*.zip
+*.rrd
+*.gz
+
+# JOC
 analytics-reporting-queue/
 elasticsearch/
 jenkins.diagnostics.ooom.OutOfOrderBuildMonitor/
 monitoring/
-plugins/
-war/
 slow-requests/
 support/
-jgroups/
+*HealthChecker.log

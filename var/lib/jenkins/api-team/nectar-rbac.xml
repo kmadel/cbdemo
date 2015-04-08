@@ -1,0 +1,68 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<nectar.plugins.rbac.strategy.RoleMatrixAuthorizationPlugin plugin="nectar-rbac@4.12">
+  <lastModified>2015-04-08 18:27:59.628 UTC</lastModified>
+  <configuration class="com.cloudbees.opscenter.client.plugin.OperationsCenterRoleMatrixAuthorizationConfig" plugin="operations-center-client@1.6">
+    <cache>
+      <parent class="nectar.plugins.rbac.groups.ContextGroupContainer" plugin="nectar-rbac@4.12">
+        <parent class="nectar.plugins.rbac.groups.ContextGroupContainer">
+          <name>Jenkins</name>
+          <groups class="java.util.Collections$UnmodifiableRandomAccessList" resolves-to="java.util.Collections$UnmodifiableList">
+            <c class="list">
+              <nectar.plugins.rbac.groups.ReadOnlyGroup>
+                <name>administrators</name>
+                <member>admin-ext</member>
+                <role>administrator</role>
+              </nectar.plugins.rbac.groups.ReadOnlyGroup>
+              <nectar.plugins.rbac.groups.ReadOnlyGroup>
+                <name>developers</name>
+                <member>developer-ext</member>
+                <role>developer</role>
+              </nectar.plugins.rbac.groups.ReadOnlyGroup>
+            </c>
+            <list reference="../c"/>
+          </groups>
+          <roleFilters class="java.util.Collections$UnmodifiableSet">
+            <c class="set"/>
+          </roleFilters>
+        </parent>
+        <name>Client Masters</name>
+        <groups class="java.util.Collections$UnmodifiableRandomAccessList" resolves-to="java.util.Collections$UnmodifiableList">
+          <c class="list"/>
+          <list reference="../c"/>
+        </groups>
+        <roleFilters class="java.util.Collections$UnmodifiableSet">
+          <c class="set"/>
+        </roleFilters>
+      </parent>
+      <role name="administrator" filterable="true">
+        <permission id="hudson.model.Hudson.Administer"/>
+      </role>
+      <role name="anonymous" filterable="true"/>
+      <role name="authenticated" filterable="true">
+        <permission id="hudson.model.Item.Read"/>
+        <permission id="hudson.model.Hudson.Read"/>
+      </role>
+      <role name="developer" filterable="true">
+        <permission id="hudson.scm.SCM.Tag"/>
+        <permission id="jenkins.metrics.api.Metrics.View"/>
+        <permission id="com.cloudbees.opscenter.analytics.Dashboard.View"/>
+        <permission id="hudson.model.View.Delete"/>
+        <permission id="hudson.model.Item.Read"/>
+        <permission id="hudson.model.Item.Move"/>
+        <permission id="nectar.plugins.rbac.roles.Role.View"/>
+        <permission id="nectar.plugins.rbac.groups.Group.View"/>
+        <permission id="hudson.model.Item.Workspace"/>
+        <permission id="hudson.model.Item.Configure"/>
+        <permission id="hudson.model.View.Create"/>
+        <permission id="hudson.model.View.Read"/>
+        <permission id="com.cloudbees.jenkins.plugin.metrics.views.Alerter.View"/>
+        <permission id="jenkins.metrics.api.Metrics.HealthCheck"/>
+        <permission id="com.cloudbees.jenkins.support.SupportPlugin.DownloadBundle"/>
+        <permission id="hudson.model.Item.Build"/>
+        <permission id="hudson.model.Item.Create"/>
+        <permission id="hudson.model.Hudson.Read"/>
+        <permission id="hudson.model.View.Configure"/>
+      </role>
+    </cache>
+  </configuration>
+</nectar.plugins.rbac.strategy.RoleMatrixAuthorizationPlugin>

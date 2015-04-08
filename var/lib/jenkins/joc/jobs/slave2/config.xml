@@ -4,7 +4,15 @@
   <description></description>
   <uid>336d6263-d971-4950-a609-d1bbe9f561d7</uid>
   <disabled>false</disabled>
-  <properties class="com.cloudbees.opscenter.server.model.SharedSlave$PropertyList"/>
+  <properties class="com.cloudbees.opscenter.server.model.SharedSlave$PropertyList">
+    <com.cloudbees.opscenter.server.rbac.SharedSlaveProxyGroupContainer plugin="operations-center-rbac@1.6">
+      <groups/>
+      <roleFilters>
+        <string>authenticated</string>
+        <string>developer</string>
+      </roleFilters>
+    </com.cloudbees.opscenter.server.rbac.SharedSlaveProxyGroupContainer>
+  </properties>
   <remoteFS>/var/lib/jenkins</remoteFS>
   <numExecutors>2</numExecutors>
   <mode>NORMAL</mode>
