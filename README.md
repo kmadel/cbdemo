@@ -25,7 +25,7 @@ Currently specific to Mac OS X.
 - clone this repo somewhere under the `/Users` directory
 - Update the `docker-compose.yml` file:
   - Update `/Users/kmadel/dev/CloudBees/docker/cbdemo` under dnsdock -> volumes to point to where you cloned this repo. NOTE: You could have several different directories configured for different demos and just change this to point to the demo you want to run.
-  - Update the `jocproxy` and `apiteamproxy` services' volumes to point to the respective haproxy subfolders where you clonde this repo
+  - Update the `jocproxy` and `apiteamproxy` services' volumes to point to the respective haproxy subfolders where you cloned this repo
 - from your boot2docker shell, run `docker-compose up -d` and after a few minutes (maybe a bit longer) you should have:
   - HA JOC at http://joc.bee.docker (check http://joc.bee.docker:9000 for HAProxy statistics)
   - HA Jenkins Enterprise at http://apiteam.bee.docker
