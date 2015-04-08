@@ -30,6 +30,11 @@ Currently specific to Mac OS X.
   - HA JOC at http://joc.bee.docker (check http://joc.bee.docker:9000 for HAProxy statistics)
   - HA Jenkins Enterprise at http://apiteam.bee.docker
 
+###Gotchas
+If you are no longer able to access docker container hosts via Mac OS X:
+- make sure you are able to ping the `boot2docker ip` - ex (the IP may vary): `ping 192.168.59.103` from Mac OS X
+- check to see that the `ip route` you added, still points to your `boot2docker ip` - `sudo route -n get 172.17.42.1`
+
 ###Create a New Demo
 - You should probably fork this repo, but not absolutely necessary
 - checkout a new branch: `git checkout -b workflow-demo master`
