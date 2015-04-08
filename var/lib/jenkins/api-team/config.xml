@@ -5,8 +5,8 @@
   <numExecutors>0</numExecutors>
   <mode>NORMAL</mode>
   <useSecurity>true</useSecurity>
-  <authorizationStrategy class="hudson.security.AuthorizationStrategy$Unsecured"/>
-  <securityRealm class="hudson.security.SecurityRealm$None"/>
+  <authorizationStrategy class="nectar.plugins.rbac.strategy.RoleMatrixAuthorizationStrategyImpl"/>
+  <securityRealm class="com.cloudbees.opscenter.security.OperationsCenterSecurityRealm" plugin="operations-center-context@1.6"/>
   <disableRememberMe>false</disableRememberMe>
   <projectNamingStrategy class="jenkins.model.ProjectNamingStrategy$DefaultProjectNamingStrategy"/>
   <workspaceDir>${ITEM_ROOTDIR}/workspace</workspaceDir>

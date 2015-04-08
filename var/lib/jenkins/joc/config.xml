@@ -7,10 +7,10 @@
   <useSecurity>true</useSecurity>
   <authorizationStrategy class="nectar.plugins.rbac.strategy.RoleMatrixAuthorizationStrategyImpl"/>
   <securityRealm class="org.jenkinsci.plugins.mocksecurityrealm.MockSecurityRealm" plugin="mock-security-realm@1.2">
-    <data>adminuser admin-ext
-developeruser developer-ext
-qauser qa-ext
-user</data>
+    <data>admin admin-ext
+dev developer-ext
+specialdev developer-ext
+read</data>
     <randomDelay>false</randomDelay>
     <userIdStrategy class="jenkins.model.IdStrategy$CaseInsensitive"/>
     <groupIdStrategy class="jenkins.model.IdStrategy$CaseInsensitive"/>

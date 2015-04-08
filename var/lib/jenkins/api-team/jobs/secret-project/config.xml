@@ -1,0 +1,62 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<com.cloudbees.hudson.plugins.folder.Folder plugin="cloudbees-folder@4.7">
+  <actions/>
+  <description></description>
+  <properties>
+    <com.cloudbees.jenkins.plugins.foldersplus.SecurityGrantsFolderProperty plugin="cloudbees-folders-plus@2.10">
+      <securityGrants/>
+    </com.cloudbees.jenkins.plugins.foldersplus.SecurityGrantsFolderProperty>
+    <com.cloudbees.hudson.plugins.folder.properties.FolderCredentialsProvider_-FolderCredentialsProperty>
+      <domainCredentialsMap class="hudson.util.CopyOnWriteMap$Hash">
+        <entry>
+          <com.cloudbees.plugins.credentials.domains.Domain plugin="credentials@1.18">
+            <specifications/>
+          </com.cloudbees.plugins.credentials.domains.Domain>
+          <java.util.concurrent.CopyOnWriteArrayList/>
+        </entry>
+      </domainCredentialsMap>
+    </com.cloudbees.hudson.plugins.folder.properties.FolderCredentialsProvider_-FolderCredentialsProperty>
+    <com.cloudbees.hudson.plugins.folder.properties.EnvVarsFolderProperty plugin="cloudbees-folders-plus@2.10">
+      <properties></properties>
+    </com.cloudbees.hudson.plugins.folder.properties.EnvVarsFolderProperty>
+    <com.cloudbees.hudson.plugins.folder.properties.SubItemFilterProperty plugin="cloudbees-folders-plus@2.10"/>
+    <com.cloudbees.hudson.plugins.folder.properties.FolderProxyGroupContainer plugin="nectar-rbac@4.12">
+      <groups>
+        <nectar.plugins.rbac.groups.Group>
+          <name>secret-project-group</name>
+          <member>specialdev</member>
+          <role>developer</role>
+        </nectar.plugins.rbac.groups.Group>
+      </groups>
+      <roleFilters>
+        <string>anonymous</string>
+        <string>authenticated</string>
+        <string>developer</string>
+      </roleFilters>
+    </com.cloudbees.hudson.plugins.folder.properties.FolderProxyGroupContainer>
+  </properties>
+  <icon class="com.cloudbees.hudson.plugins.folder.icons.StockFolderIcon"/>
+  <views>
+    <hudson.model.AllView>
+      <owner class="com.cloudbees.hudson.plugins.folder.Folder" reference="../../.."/>
+      <name>All</name>
+      <filterExecutors>false</filterExecutors>
+      <filterQueue>false</filterQueue>
+      <properties class="hudson.model.View$PropertyList"/>
+    </hudson.model.AllView>
+  </views>
+  <viewsTabBar class="hudson.views.DefaultViewsTabBar"/>
+  <primaryView>All</primaryView>
+  <healthMetrics>
+    <com.cloudbees.hudson.plugins.folder.health.WorstChildHealthMetric/>
+    <com.cloudbees.hudson.plugins.folder.health.AverageChildHealthMetric plugin="cloudbees-folders-plus@2.10"/>
+    <com.cloudbees.hudson.plugins.folder.health.JobStatusHealthMetric plugin="cloudbees-folders-plus@2.10">
+      <success>true</success>
+      <failure>true</failure>
+      <unstable>true</unstable>
+      <unbuilt>true</unbuilt>
+      <countVirginJobs>false</countVirginJobs>
+    </com.cloudbees.hudson.plugins.folder.health.JobStatusHealthMetric>
+    <com.cloudbees.hudson.plugins.folder.health.ProjectEnabledHealthMetric plugin="cloudbees-folders-plus@2.10"/>
+  </healthMetrics>
+</com.cloudbees.hudson.plugins.folder.Folder>
