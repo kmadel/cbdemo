@@ -58,6 +58,7 @@ bin/
 **/shelvedProjects/
 **/updates/
 **/war/
+**/jobs/**/builds/*
 
 # Tools that Jenkins manages
 /tools/

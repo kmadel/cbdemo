@@ -63,6 +63,13 @@ slave2:
     environment:
         - DNSDOCK_NAME=slave2
         - DNSDOCK_IMAGE=bee
+slave3:
+    image: apemberton/jenkins-slave
+    volumes_from:
+        - dnsdock
+    environment:
+        - DNSDOCK_NAME=slave3
+        - DNSDOCK_IMAGE=bee
 jocproxy:
     image: dockerfile/haproxy
     expose:
