@@ -32,8 +32,11 @@ Currently specific to Mac OS X.
 
 ###Gotchas
 If you are no longer able to access docker container hosts via Mac OS X:
+- check that the route is correct: `sudo route -n add -net 172.17.0.0 192.168.59.103`
+  - Gateway should be `boot2docker ip`
 - make sure you are able to ping the `boot2docker ip` - ex (the IP may vary): `ping 192.168.59.103` from Mac OS X
 - check to see that the `ip route` you added, still points to your `boot2docker ip` - `sudo route -n get 172.17.42.1`
+- You may have to flush DNS cache - on Yosemite use: `sudo discoveryutil mdnsflushcache`
 
 ###Create a New Demo
 - You should probably fork this repo, but not absolutely necessary
