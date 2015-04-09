@@ -6,12 +6,9 @@
   <properties>
     <org.jenkinsci.plugins.uniqueid.impl.JobIdStore_-JobIdProperty plugin="unique-id@1.2">
       <id>
-        <id>NDkxMDMyYjktMjNmYS00ODQ2LTg0OG</id>
+        <id>ZjYzMDg1ODctZGU0NS00NTE1LThiOT</id>
       </id>
     </org.jenkinsci.plugins.uniqueid.impl.JobIdStore_-JobIdProperty>
-    <com.cloudbees.opscenter.analytics.reporter.items.AnalyticsJobProperty plugin="operations-center-analytics-reporter@1.6">
-      <created>1428518676810</created>
-    </com.cloudbees.opscenter.analytics.reporter.items.AnalyticsJobProperty>
   </properties>
   <scm class="hudson.scm.NullSCM"/>
   <canRoam>true</canRoam>
