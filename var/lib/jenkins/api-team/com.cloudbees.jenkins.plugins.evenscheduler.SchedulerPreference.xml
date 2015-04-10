@@ -1,0 +1,4 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<com.cloudbees.jenkins.plugins.evenscheduler.SchedulerPreference_-DescriptorImpl plugin="cloudbees-even-scheduler@3.5">
+  <preferEvenload>false</preferEvenload>
+</com.cloudbees.jenkins.plugins.evenscheduler.SchedulerPreference_-DescriptorImpl>

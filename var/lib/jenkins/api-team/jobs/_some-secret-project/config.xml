@@ -3,6 +3,20 @@
   <actions/>
   <description></description>
   <properties>
+    <com.cloudbees.hudson.plugins.folder.properties.FolderProxyGroupContainer plugin="nectar-rbac@4.12">
+      <groups>
+        <nectar.plugins.rbac.groups.Group>
+          <name>secret-project-group</name>
+          <member>specialdev</member>
+          <role>developer</role>
+        </nectar.plugins.rbac.groups.Group>
+      </groups>
+      <roleFilters>
+        <string>anonymous</string>
+        <string>developer</string>
+        <string>authenticated</string>
+      </roleFilters>
+    </com.cloudbees.hudson.plugins.folder.properties.FolderProxyGroupContainer>
     <com.cloudbees.jenkins.plugins.foldersplus.SecurityGrantsFolderProperty plugin="cloudbees-folders-plus@2.10">
       <securityGrants/>
     </com.cloudbees.jenkins.plugins.foldersplus.SecurityGrantsFolderProperty>
@@ -20,20 +34,6 @@
       <properties></properties>
     </com.cloudbees.hudson.plugins.folder.properties.EnvVarsFolderProperty>
     <com.cloudbees.hudson.plugins.folder.properties.SubItemFilterProperty plugin="cloudbees-folders-plus@2.10"/>
-    <com.cloudbees.hudson.plugins.folder.properties.FolderProxyGroupContainer plugin="nectar-rbac@4.12">
-      <groups>
-        <nectar.plugins.rbac.groups.Group>
-          <name>secret-project-group</name>
-          <member>specialdev</member>
-          <role>developer</role>
-        </nectar.plugins.rbac.groups.Group>
-      </groups>
-      <roleFilters>
-        <string>anonymous</string>
-        <string>authenticated</string>
-        <string>developer</string>
-      </roleFilters>
-    </com.cloudbees.hudson.plugins.folder.properties.FolderProxyGroupContainer>
   </properties>
   <icon class="com.cloudbees.hudson.plugins.folder.icons.StockFolderIcon"/>
   <views>

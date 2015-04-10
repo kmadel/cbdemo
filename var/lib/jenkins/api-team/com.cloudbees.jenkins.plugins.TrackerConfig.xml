@@ -1,0 +1,4 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<com.cloudbees.jenkins.plugins.TrackerConfig plugin="cloudbees-wasted-minutes-tracker@3.7">
+  <ignoredLabels/>
+</com.cloudbees.jenkins.plugins.TrackerConfig>

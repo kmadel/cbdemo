@@ -1,0 +1,17 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<scriptApproval plugin="script-security@1.13">
+  <approvedScriptHashes>
+    <string>005746befe9c2ec4860a38ee4dfa62d0c8deba7f</string>
+    <string>2371aa30f46b3f4869ea151d7e4671dc5da0e081</string>
+    <string>919d4ba0c843a9976e63ca1263b51920fc33be31</string>
+    <string>92b519a6264b2a2c9ac719fbfcc0c78ee04be143</string>
+    <string>cd69d6f04a5d311efb9df38bbaef5cdb91f23199</string>
+    <string>e970edbebdd72a2de22946f39841000a95c8919d</string>
+  </approvedScriptHashes>
+  <approvedSignatures/>
+  <aclApprovedSignatures/>
+  <approvedClasspathEntries/>
+  <pendingScripts/>
+  <pendingSignatures/>
+  <pendingClasspathEntries/>
+</scriptApproval>

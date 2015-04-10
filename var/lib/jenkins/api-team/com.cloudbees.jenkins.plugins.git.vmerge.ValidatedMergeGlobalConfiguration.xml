@@ -1,0 +1,5 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<com.cloudbees.jenkins.plugins.git.vmerge.ValidatedMergeGlobalConfiguration plugin="git-validated-merge@3.17">
+  <pushFromMaster>false</pushFromMaster>
+  <preferHttp>false</preferHttp>
+</com.cloudbees.jenkins.plugins.git.vmerge.ValidatedMergeGlobalConfiguration>

@@ -6,7 +6,7 @@
   <properties>
     <org.jenkinsci.plugins.uniqueid.impl.JobIdStore_-JobIdProperty plugin="unique-id@1.2">
       <id>
-        <id>ZjgzYWFiOTctZTc3MS00ZTUwLWE3ZW</id>
+        <id>M2E0Nzc4MjgtY2YwMS00MzdhLWI2ND</id>
       </id>
     </org.jenkinsci.plugins.uniqueid.impl.JobIdStore_-JobIdProperty>
   </properties>
@@ -19,8 +19,7 @@
   <concurrentBuild>false</concurrentBuild>
   <builders>
     <hudson.tasks.Shell>
-      <command>echo &apos;Hello!&apos;
-sleep 10
+      <command>echo &apos;this is a secret job&apos;
 date</command>
     </hudson.tasks.Shell>
   </builders>

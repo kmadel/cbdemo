@@ -1,0 +1,65 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<flow-definition plugin="workflow-job@1.0">
+  <actions/>
+  <description></description>
+  <keepDependencies>false</keepDependencies>
+  <properties>
+    <nectar.plugins.rbac.groups.JobProxyGroupContainer plugin="nectar-rbac@4.12">
+      <groups/>
+    </nectar.plugins.rbac.groups.JobProxyGroupContainer>
+    <org.jenkinsci.plugins.uniqueid.impl.JobIdStore_-JobIdProperty plugin="unique-id@1.2">
+      <id>
+        <id>YTU3OGE0OGMtM2QwNC00NjQ1LTljMT</id>
+      </id>
+    </org.jenkinsci.plugins.uniqueid.impl.JobIdStore_-JobIdProperty>
+    <com.cloudbees.opscenter.analytics.reporter.items.AnalyticsJobProperty plugin="operations-center-analytics-reporter@1.6">
+      <created>1428625579268</created>
+    </com.cloudbees.opscenter.analytics.reporter.items.AnalyticsJobProperty>
+  </properties>
+  <definition class="org.jenkinsci.plugins.workflow.cps.CpsFlowDefinition" plugin="workflow-cps@1.0">
+    <script>stage &apos;Build / Unit Test / Package&apos;
+echo &apos;Building, unit testing, and packaging...&apos;
+node {
+  sh &apos;date&apos;
+}
+checkpoint &apos;Completed Build / Unit Test / Package&apos;
+
+stage &apos;Integration Tests&apos;
+echo &apos;Integration testing...&apos;
+node {
+  sh &apos;date&apos;
+}
+checkpoint &apos;Completed Integration Testing&apos;
+
+stage &apos;Deploy to QA&apos;
+echo &apos;Deploying to QA...&apos;
+node {
+  sh &apos;date&apos;
+}
+checkpoint &apos;Completed QA Deployment&apos;
+
+stage &apos;Functional Tests&apos;
+echo &apos;Functional testing...&apos;
+node {
+  sh &apos;date&apos;
+}
+checkpoint &apos;Completed Functional Testing&apos;
+
+stage &apos;Staging&apos;
+input &apos;Did all tests pass?&apos;
+echo &apos;Staging...&apos;
+node {
+  sh &apos;date&apos;
+}
+checkpoint &apos;Completed Staging&apos;
+
+stage &apos;Production&apos;
+echo &apos;Deploying to Production...&apos;
+node {
+  sh &apos;date&apos;
+}
+</script>
+    <sandbox>false</sandbox>
+  </definition>
+  <triggers/>
+</flow-definition>
