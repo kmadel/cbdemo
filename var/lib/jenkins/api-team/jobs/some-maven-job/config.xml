@@ -6,12 +6,9 @@
   <properties>
     <org.jenkinsci.plugins.uniqueid.impl.JobIdStore_-JobIdProperty plugin="unique-id@1.2">
       <id>
-        <id>NWE3ZGY0M2MtYTRkZi00MDEwLWFkZT</id>
+        <id>MDEzMjgxMDItYjVmNy00MmFhLWFjND</id>
       </id>
     </org.jenkinsci.plugins.uniqueid.impl.JobIdStore_-JobIdProperty>
-    <com.cloudbees.opscenter.analytics.reporter.items.AnalyticsJobProperty plugin="operations-center-analytics-reporter@1.6">
-      <created>1428606854517</created>
-    </com.cloudbees.opscenter.analytics.reporter.items.AnalyticsJobProperty>
   </properties>
   <scm class="hudson.scm.NullSCM"/>
   <canRoam>true</canRoam>
@@ -20,9 +17,10 @@
   <blockBuildWhenUpstreamBuilding>false</blockBuildWhenUpstreamBuilding>
   <triggers/>
   <concurrentBuild>false</concurrentBuild>
+  <goals>clean install</goals>
   <aggregatorStyleBuild>true</aggregatorStyleBuild>
   <incrementalBuild>false</incrementalBuild>
-  <ignoreUpstremChanges>false</ignoreUpstremChanges>
+  <ignoreUpstremChanges>true</ignoreUpstremChanges>
   <archivingDisabled>false</archivingDisabled>
   <siteArchivingDisabled>false</siteArchivingDisabled>
   <fingerprintingDisabled>false</fingerprintingDisabled>

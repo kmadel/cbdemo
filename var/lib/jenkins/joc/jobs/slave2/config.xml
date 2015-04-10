@@ -8,8 +8,8 @@
     <com.cloudbees.opscenter.server.rbac.SharedSlaveProxyGroupContainer plugin="operations-center-rbac@1.6">
       <groups/>
       <roleFilters>
-        <string>authenticated</string>
         <string>developer</string>
+        <string>authenticated</string>
       </roleFilters>
     </com.cloudbees.opscenter.server.rbac.SharedSlaveProxyGroupContainer>
   </properties>

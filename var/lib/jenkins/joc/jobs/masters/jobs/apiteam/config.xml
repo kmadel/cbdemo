@@ -19,15 +19,12 @@ kJEWFQIDAQAB</identity>
     <com.cloudbees.opscenter.analytics.MasterReportingProperty plugin="operations-center-analytics@1.6">
       <enabled>true</enabled>
     </com.cloudbees.opscenter.analytics.MasterReportingProperty>
-    <com.cloudbees.opscenter.server.properties.MasterExecutorCountProperty>
-      <count>0</count>
-    </com.cloudbees.opscenter.server.properties.MasterExecutorCountProperty>
     <com.cloudbees.opscenter.server.properties.ConnectedMasterOwnerProperty>
       <owners></owners>
       <delay>5</delay>
     </com.cloudbees.opscenter.server.properties.ConnectedMasterOwnerProperty>
     <com.cloudbees.opscenter.server.properties.ConnectedMasterLicenseServerProperty>
-      <strategy class="com.cloudbees.opscenter.server.properties.ConnectedMasterLicenseServerProperty$NoExecutorsStrategy"/>
+      <strategy class="com.cloudbees.opscenter.server.properties.ConnectedMasterLicenseServerProperty$FloatingExecutorsStrategy"/>
     </com.cloudbees.opscenter.server.properties.ConnectedMasterLicenseServerProperty>
   </properties>
   <state>Approved</state>
